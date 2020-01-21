@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo of loading images without preloading.">
+  <title>No preload demo</title>
+  <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg==">
+  <link rel="preload" href="stylesheets/style.css" as="style">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="preload" href="images/image1" as="image">
+</head>
+<body class="no-preload">
+  <header>
+    <h1>Image preloading demo</h1>
+    <h2>Not preloaded images</h2>
+  </header>
+  <div class="gallery">
+    <img src="images/image1" alt="Example image 1">
+    <div class="bg" style="background-image: url(images/image2)"></div>
+  </div>
+</body>
+</html>

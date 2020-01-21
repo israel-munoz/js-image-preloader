@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo of preloading images with JavaScript.">
+  <title>Preload demo</title>
+  <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg==">
+  <link rel="preload" href="stylesheets/style.css" as="style">
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body class="preload">
+  <header>
+    <h1>Image preloading demo</h1>
+    <h2>Preloaded images</h2>
+  </header>
+  <main class="gallery">
+    <img src="images/loading.svg" alt="Example image" data-src="images/image1">
+    <div class="bg" data-background="images/image2"></div>
+  </main>
+
+  <script>
+    // Preload images in <img> tags
+    document.querySelectorAll('img[data-src]').forEach(function (img) {
+      preload(img, img.dataset.src);
+    });
+
+    // Preload images in CSS background
+    document.querySelectorAll('[data-background]').forEach(function (elem) {
+      preload(elem, elem.dataset.background, true);
+    });
+
+    // Preload function
+    function preload(elem, src, isBackgroundImage) {
+      fetch(src).then(r => r.blob()).then(() => {
+        if (isBackgroundImage) {
+          elem.style.setProperty('background-image', 'url(' + src + ')');
+        } else {
+          elem.src = src;
+        }
+      });
+    }
+  </script>
+</body>
+</html>

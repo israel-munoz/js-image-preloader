@@ -1,0 +1,10 @@
+<svg viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <text x="21" y="42" alignment-baseline="central" style="font-family:sans-serif;font-size:15;font-weight:700">Loading</text>
+  <circle cx="40" cy="55" r="3"/>
+  <circle cx="50" cy="55" r="3">
+    <animate attributeType="CSS" attributeName="visibility" values="hidden;visible;visible" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="60" cy="55" r="3">
+    <animate attributeType="CSS" attributeName="visibility" values="hidden;hidden;visible" dur="1s" repeatCount="indefinite"/>
+  </circle>
+</svg>
