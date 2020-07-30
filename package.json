@@ -1,6 +1,6 @@
 {
   "name": "preload-images",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Demo for preloading images using JavaScript.",
   "author": {
     "name": "Israel Munoz",
@@ -12,11 +12,11 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "pug": "^2.0.4"
+    "cookie-parser": "~1.4.5",
+    "debug": "~4.1.1",
+    "express": "~4.17.1",
+    "http-errors": "~1.8.0",
+    "morgan": "~1.10.0",
+    "pug": "^3.0.0"
   }
 }
